@@ -1,8 +1,7 @@
 // Taschenrechner 1.0.1
-// Test, um zu schauen ob GitHub funzt lol
-// 12.02.2022
+// 15.02.2022
 // By Cian Howlin & Max Berger
-// Gymnasium Neutraubling
+// Klasse 10d, Gymnasium Neutraubling
 
 public class main {
 
