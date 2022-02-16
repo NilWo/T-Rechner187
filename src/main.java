@@ -2,6 +2,7 @@
 // 15.02.2022
 // By Cian Howlin & Max Berger
 // Klasse 10d, Gymnasium Neutraubling
+//ich bin cool
 
 public class main {
 
