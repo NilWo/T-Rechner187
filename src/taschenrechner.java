@@ -1,3 +1,4 @@
+import java.util.Locale;
 import java.util.Scanner;
 
 public class taschenrechner {
@@ -9,7 +10,7 @@ public class taschenrechner {
 
     public void erfassung() {
         int nte;
-        Scanner scannerVariable = new Scanner(System.in);
+        Scanner scannerVariable = new Scanner(System.in).useLocale(Locale.US);
         System.out.println("Mit wie viel Zahlen möchtest du rechnen?");
         anz = scannerVariable.nextInt();
         zahl = new double[anz];
