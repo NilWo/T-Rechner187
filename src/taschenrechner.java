@@ -149,7 +149,7 @@ public class taschenrechner {
     }
 
     public void wurzel() {
-        if (anz != 1)
+        if (anz !=1)
         {
             System.out.print("Du darfst bei Wurzeln nur eine Zahl berechnen lassen!");
         }
