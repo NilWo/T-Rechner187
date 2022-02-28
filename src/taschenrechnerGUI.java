@@ -1,10 +1,16 @@
+/*
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.util.Locale;
+import java.util.Scanner;
 
 public class taschenrechnerGUI implements ActionListener {
 
+    int anz;
+    double ergebnis = 0;
+    double zahl[];
     JFrame frame;
     JButton button1;
     JButton button2;
@@ -15,6 +21,9 @@ public class taschenrechnerGUI implements ActionListener {
     JButton button7;
     JButton button8;
     JButton button9;
+    JButton buttonplus;
+    JButton buttonminus;
+    JButton buttonmal;
     // JLabel label;
     JPanel panel;
 
@@ -49,12 +58,20 @@ public class taschenrechnerGUI implements ActionListener {
         button9 = new JButton("9");
         button9.addActionListener(this);
 
+        buttonplus = new JButton("+");
+        buttonplus.addActionListener(this);
+
+        buttonminus = new JButton("-");
+        buttonminus.addActionListener(this);
+
+        buttonmal = new JButton("*");
+        buttonmal.addActionListener(this);
 
         // label = new JLabel("Idfk");
 
         panel = new JPanel();
         panel.setBorder(BorderFactory.createEmptyBorder(10,10,10,10));
-        panel.setLayout(new FlowLayout());
+        panel.setLayout(new GridLayout(4, 3));
         panel.add(button1);
         panel.add(button2);
         panel.add(button3);
@@ -64,17 +81,41 @@ public class taschenrechnerGUI implements ActionListener {
         panel.add(button7);
         panel.add(button8);
         panel.add(button9);
+        panel.add(buttonplus);
+        panel.add(buttonminus);
+        panel.add(buttonmal);
+
         // panel.add(label);
 
         frame.add(panel, BorderLayout.CENTER);
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        frame.setSize(1000,1000);
         frame.setTitle("Taschenrechner GUI");
         frame.pack();
         frame.setVisible(true);
     }
 
-    @Override
-    public void actionPerformed(ActionEvent e) {
-        // label.setText("kokain");
+    public void erfassungGUI() {
+        ActionListener buttonListener = new ActionListener();
+        int nte;
+        Scanner scannerVariable = new Scanner(System.in).useLocale(Locale.US);
+        System.out.println("Mit wie viel Zahlen möchtest du rechnen?");
+        anz = scannerVariable.nextInt();
+        zahl = new double[anz];
+
+        for (int i = 0; i < anz; i++) {
+            nte = i + 1;
+            System.out.println("Zahl " + nte + "?");
+        }
+    }
+
+    public void setUpButtonListeners() {
+        ActionListener buttonListener = new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent ae) {
+            }
+        }
+
     }
 }
+ */
