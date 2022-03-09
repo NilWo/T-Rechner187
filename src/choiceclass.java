@@ -7,7 +7,7 @@ public class choiceclass {
     public static taschenrechner rechner;
 
     public void choice() {
-        for (; ; ) {
+        for (;;) {
             rechner = new taschenrechner();
 
             Scanner scanner = new Scanner(System.in);
